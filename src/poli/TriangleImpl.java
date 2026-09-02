@@ -4,7 +4,7 @@
  * 三角形に関する実装クラス
  * TriangleImple
  */
-public class TriangleImple implements Shape {
+public class TriangleImpl implements Shape {
 
     // 底辺
     private double bottom;
@@ -13,7 +13,7 @@ public class TriangleImple implements Shape {
     private double height;
 
     // コンストラクタ
-    public TriangleImple(double bottom, double height) {
+    public TriangleImpl(double bottom, double height) {
         this.bottom = bottom;
         this.height = height;
     }

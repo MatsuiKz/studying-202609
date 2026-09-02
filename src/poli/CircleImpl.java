@@ -4,13 +4,13 @@
  * 円に関する実装クラス
  * CircleImple
  */
-public class CircleImple implements Shape{
+public class CircleImpl implements Shape{
 
     // 半径
     private double radius;
 
     // コンストラクタ
-    public CircleImple(double radius) {
+    public CircleImpl(double radius) {
         this.radius = radius;
     }
 

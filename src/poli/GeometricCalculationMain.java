@@ -1,3 +1,4 @@
+import java.util.List;
 
 /**
  * 図形計算の実行クラス
@@ -5,14 +6,16 @@
  */
 public class GeometricCalculationMain {
     public static void main(String[] args) {
-        // 円の面積
-        calcCircleArea(5.0);
+        // Shape型なのでListで受けられる
+        List<Shape> shapes = List.of(new CircleImpl(5.0), new TriangleImpl(1, 2), new SquareImpl(2, 3));
 
-        // 三角形の面積
-        calcTriangleArea(1, 2);
-
-        // 四角形の面積
-        calcSquareArea(3, 4);
+        // 合計値を出す場合（当初要件ではないが）
+        double total = 0;
+        for (Shape shape: shapes) {
+            total += shape.getArea();
+        }
+        
+        System.out.println(total);
     }
 
     /**
@@ -22,7 +25,7 @@ public class GeometricCalculationMain {
      */
     private static void calcCircleArea(double radius) {
         // 円の面積
-        CircleImple circle = new CircleImple(radius);
+        Shape circle = new CircleImpl(radius);
         double area = circle.getArea();
         System.out.println("円の面積: " + area);
     }
@@ -35,7 +38,7 @@ public class GeometricCalculationMain {
      */
     private static void calcTriangleArea(double bottom, double height) {
         // 三角形の面積
-        TriangleImple triangle = new TriangleImple(bottom, height);
+        TriangleImpl triangle = new TriangleImpl(bottom, height);
         double area = triangle.getArea();
         System.out.println("三角形の面積: " + area);
     }
@@ -48,7 +51,7 @@ public class GeometricCalculationMain {
      */
     private static void calcSquareArea(double vertical, double horizontal) {
         // 四角形の面積
-        SquareImple square = new SquareImple(vertical, horizontal);
+        SquareImpl square = new SquareImpl(vertical, horizontal);
         double area = square.getArea();
         System.out.println("四角形の面積: " + area);
     }

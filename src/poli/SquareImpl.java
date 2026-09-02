@@ -1,10 +1,10 @@
 
 /**
  * 図形クラス実装
- * 三角形に関する実装クラス
+ * 四角形に関する実装クラス
  * SquareImple
  */
-public class SquareImple implements Shape {
+public class SquareImpl implements Shape {
 
     // 辺の長さ（縦）
     private double vertical;
@@ -13,7 +13,7 @@ public class SquareImple implements Shape {
     private double horizontal;
 
     // コンストラクタ
-    public SquareImple(double vertical, double horizontal) {
+    public SquareImpl(double vertical, double horizontal) {
         this.vertical = vertical;
         this.horizontal = horizontal;
     }
