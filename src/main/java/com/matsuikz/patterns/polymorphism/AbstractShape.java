@@ -1,3 +1,5 @@
+package com.matsuikz.patterns.polymorphism;
+
 abstract class AbstractShape {
     // 計算名称
     private String name;

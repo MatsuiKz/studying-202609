@@ -1,3 +1,4 @@
+package com.matsuikz.patterns.polymorphism;
 /**
  * 図形クラス実装
  * 三角形に関する実装クラス

@@ -1,3 +1,4 @@
+package com.matsuikz.patterns.polymorphism;
 import java.util.List;
 
 /**
