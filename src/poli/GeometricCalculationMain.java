@@ -8,37 +8,30 @@ public class GeometricCalculationMain {
     public static void main(String[] args) {
 
         // Shape型なのでListで受けられる
-        List<Shape> shapes = List.of(
-                new CircleImpl(5.0), new TriangleImpl(1, 2), new SquareImpl(2, 3));
+        List<AbstractShape> shapes = List.of(
+                new Circle(5.0, "円"), new Triangle(1, 2, "三角形"), new Square(2, 3, "四角形"));
 
         areaSum(shapes);
         areaIndividual(shapes);
 
     }
 
-    private static void areaSum(List<Shape> shapes) {
+    private static void areaSum(List<AbstractShape> shapes) {
 
         // 合計値を出す場合（当初要件ではないが）
         double total = 0;
-        for (Shape shape : shapes) {
+        for (AbstractShape shape : shapes) {
             total += shape.getArea();
         }
 
-        System.out.println(total);
+        System.out.println("面積の合計：" + total);
     }
 
-    private static void areaIndividual(List<Shape> shapes) {
+    private static void areaIndividual(List<AbstractShape> shapes) {
 
-        for (Shape shape : shapes) {
-            if (shape instanceof CircleImpl) {
-                System.out.println("円の面積：" + String.valueOf(shape.getArea()));
-            }
-            if (shape instanceof TriangleImpl) {
-                System.out.println("三角形の面積：" + String.valueOf(shape.getArea()));
-            }
-            if (shape instanceof SquareImpl) {
-                System.out.println("四角形の面積：" + String.valueOf(shape.getArea()));
-            }
+        for (AbstractShape shape : shapes) {
+            System.out.println(shape.getName() + "の面積：" + shape.getArea());
         }
+
     }
 }

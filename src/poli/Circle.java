@@ -1,16 +1,16 @@
-
 /**
  * 図形クラス実装
  * 円に関する実装クラス
  * CircleImple
  */
-public class CircleImpl implements Shape{
+public class Circle extends AbstractShape {
 
     // 半径
     private double radius;
 
     // コンストラクタ
-    public CircleImpl(double radius) {
+    public Circle(double radius, String name) {
+        super(name);
         this.radius = radius;
     }
 

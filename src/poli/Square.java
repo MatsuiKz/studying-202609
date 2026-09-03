@@ -1,10 +1,9 @@
-
 /**
  * 図形クラス実装
  * 四角形に関する実装クラス
  * SquareImple
  */
-public class SquareImpl implements Shape {
+public class Square extends AbstractShape {
 
     // 辺の長さ（縦）
     private double vertical;
@@ -13,7 +12,8 @@ public class SquareImpl implements Shape {
     private double horizontal;
 
     // コンストラクタ
-    public SquareImpl(double vertical, double horizontal) {
+    public Square(double vertical, double horizontal, String name) {
+        super(name);
         this.vertical = vertical;
         this.horizontal = horizontal;
     }
@@ -22,4 +22,5 @@ public class SquareImpl implements Shape {
     public double getArea() {
         return vertical * horizontal;
     }
+
 }

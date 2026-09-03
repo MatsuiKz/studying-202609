@@ -1,10 +1,9 @@
-
 /**
  * 図形クラス実装
  * 三角形に関する実装クラス
  * TriangleImple
  */
-public class TriangleImpl implements Shape {
+public class Triangle extends AbstractShape {
 
     // 底辺
     private double bottom;
@@ -13,7 +12,8 @@ public class TriangleImpl implements Shape {
     private double height;
 
     // コンストラクタ
-    public TriangleImpl(double bottom, double height) {
+    public Triangle(double bottom, double height, String name) {
+        super(name);
         this.bottom = bottom;
         this.height = height;
     }
